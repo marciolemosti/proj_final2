@@ -66,7 +66,7 @@ O projeto está organizado da seguinte forma:
 
 ## Configuração e Execução Local
 
-Para configurar e executar este projeto em sua máquina local, siga os passos abaixo. 
+Para configurar e executar este projeto em sua máquina local, siga os passos abaixo. Para um guia mais detalhado, consulte o documento `guia_github_execucao_v2.docx` fornecido com o projeto.
 
 ### 1. Pré-requisitos
 
@@ -77,10 +77,10 @@ Para configurar e executar este projeto em sua máquina local, siga os passos ab
 ### 2. Clonar o Repositório
 
 ```bash
-git clone https://github.com/marciolemosti/proj_final2.git
-cd proj_final2
+git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+cd NOME_DO_REPOSITORIO
 ```
-
+(Substitua `SEU_USUARIO/NOME_DO_REPOSITORIO` pela URL correta do seu repositório)
 
 ### 3. Configurar Ambiente Virtual e Instalar Dependências
 
@@ -96,7 +96,7 @@ pip install -r requirements.txt
 
 ### 4. Configurar Credenciais do Banco de Dados
 
-*   **Scripts Python:** Os scripts `load_all_data_to_supabase_normalized_v2.py` e `streamlit_app.py` utilizam uma senha codificada em Base64. 
+*   **Scripts Python:** Os scripts `load_all_data_to_supabase_normalized_v2.py` e `streamlit_app.py` utilizam uma senha codificada em Base64 (`cHJvamV0b2JpMTIz` que decodifica para `projetobi123`). Se a senha do seu banco Supabase for diferente, você precisará gerar a string Base64 correspondente à sua senha e substituí-la no código, ou, idealmente, modificar os scripts para lerem de variáveis de ambiente (mais seguro).
 *   **dbt (`profiles.yml`):** O arquivo `bi_project/termometro_economia/profiles.yml` está configurado para ler a senha do banco da variável de ambiente `SUPABASE_PASSWORD`. Defina esta variável em seu terminal antes de executar comandos dbt:
     ```bash
     export SUPABASE_PASSWORD="SUA_SENHA_REAL_DO_SUPABASE"
@@ -145,10 +145,11 @@ Para que a automação funcione no seu fork/repositório, você precisará confi
 *   `SUPABASE_PASSWORD` (a senha real do seu banco Supabase)
 *   `SUPABASE_PORT`
 
+Consulte o `guia_github_execucao_v2.docx` para detalhes sobre a configuração dos Actions.
 
 ---
 
-## UNIVERSIDADE DE FORTALEZA
+## Autoria
 
 *   **Autor:** Márcio José Lemos Garcia
 *   **Orientador:** Prof. Mest. Thiago Bhlum

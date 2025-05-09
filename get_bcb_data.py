@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-sys.path.append('/opt/.manus/.sandbox-runtime')
 import requests
 import json
 import datetime
