@@ -30,7 +30,7 @@ jobs:
           PYTHONIOENCODING: utf-8
 
       - name: Run IBGE Data Collection Script
-        run: python get_ibge_data_debug.py # Using the debug version as it was the last successful one
+        run: python get_ibge_pib_data.py # Using the debug version as it was the last successful one
         env:
           # No secrets needed for this script
           PYTHONIOENCODING: utf-8
